@@ -1,0 +1,2 @@
+alert('javascript works properly');
+

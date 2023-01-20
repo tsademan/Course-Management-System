@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>WELCOME</title>
+        <style type="text/css">
+              .myformat{
+                  font-weight: bold;
+                  font-size: large;
+                  font-family: cursive;
+                  color: blueviolet;
+                  background-color: #04AA6D;
+                  margin: 30px 10px 10px 10px;
+                  border-radius:400px 400px 400px 400px;
+              }
+         </style>
+     </h:head>
+    <body styleClass="myformat">
+           <h:form>
+               <div
+               style="width: 100%; font-size: 40px; line-height:40px; background-color:#d58512 ">
+               <h:outputText value="&#144;" />
+             <h:panelGroup id="dropZoneId" layout="block" 
+              style="height:700px;width:1200px;text-align:center;"> 
+            <h:outputLabel value="UserName" style="height:20px;width:100px;"/>
+            <td  style="padding-left:180px;">
+                <h:inputText value="#{firstBean.username}" style="height:30px;width:200px;" styleClass="myformat"/><br/>
+            </td>
+              <h:outputLink id="lnk" value="#"/>
+            <h:outputLabel value="PassWord"  style="height:30px; width:200px;"/>
+            <td  style="padding-left:180px;">
+            <h:inputSecret value="#{firstBean.password}" styleClass="myformat" style="height:30px;width:200px;"/><br/>
+            </td>
+            <h:commandButton value="LOGIN"  style="height:40px;width:80px;" action="/HomePage.xhtml" styleClass="myformat"/>
+           </h:panelGroup>
+             </div>
+           </h:form>
+    </body>
+</html>

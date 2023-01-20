@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>WELCOME TO COURSE MANAGEMENT SYSTEM</title>
+  
+        <style>
+            .BackGimage{
+             background-image: url("resources/images/oh.png");
+             background-size:45%;
+            }
+            
+        </style>
+         <link href="./resources/css/mainStyle.css" rel="stylesheet" type="text/css"/>
+      </h:head>
+    <h:body styleClass="BackGimage">
+        <h:form style="font-size: 100px;width: 180px;height: 200px;color: blue;text-justify: auto;">
+                 COURSE MANAGEMENT SYSTEM
+        </h:form>
+        <h:body >
+            <h:outputText value="#{firstBean.Login()}"/>
+  
+            <h:form  >
+       <h:commandButton value="LOGOUT" action="index.xhtml" styleClass="myformat" style=" margin-bottom:10px;margin-right:10px;margin-left:10px;
+     font-size:20px;width:100px;height:400px;display:block;position:relative;top:-200px; right:1px;margin-left:auto;width:106px;height:40px;color:aqua;background-color: fuchsia;border-color:greenyellow"></h:commandButton>
+     <h:commandButton value="GRADE"  styleClass="myformat" action="StdRegister.xhtml" style="margin-bottom:10px;margin-right:10px;margin-left:10px;
+     font-size:20px;width:100px;height:400px;display:block;position:relative;top:-249px; right:115px;margin-left:auto;width:106px;height:40px;color:aqua;background-color: fuchsia;"></h:commandButton>
+     <h:commandButton value="COURSE"  styleClass="myformat" action="CourseRegister.xhtml" style="margin-bottom:10px;margin-right:10px;margin-left:10px;
+     font-size:20px;width:100px;height:400px;display:block;position:relative;top:-299px; right:230px;margin-left:auto;width:106px;height:40px;color:aqua;background-color: fuchsia;"></h:commandButton>
+     <h:commandButton value="STUDENT"  styleClass="myformat"  action="StdRegister.xhtml" style="margin-bottom:10px;margin-right:10px;margin-left:10px;
+     font-size:20px;width:150px;height:400px;display:block;position:relative;top:-349px; right:345px;margin-left:auto;width:106px;height:40px;color:aqua;background-color: fuchsia;"></h:commandButton>
+     <h:commandButton value="HOME" styleClass="myformat"  action="HomePage.xhtml" style="margin-bottom:10px;margin-right:10px;margin-left:10px;
+     font-size:20px;width:100px;height:400px;display:block;position:relative;top:-399px; right:460px;margin-left:auto;width:106px;height:40px;color:aqua;background-color: fuchsia;"></h:commandButton>
+        </h:form>
+          </h:body>
+     
+    </h:body>
+</html>

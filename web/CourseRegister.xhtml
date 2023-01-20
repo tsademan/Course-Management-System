@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <h:form style="position:relative;top:20px;right:-500px;color:greenyellow;font-size:30px;">MANAGE COURSES</h:form>
+    </h:head>
+      <style>
+            .BackGimage{
+             background-image: url("resources/images/oh3.jpg");
+             background-size:100%;
+            }
+        </style>
+         <link href="./resources/css/mainStyle.css" rel="stylesheet" type="text/css"/>
+        <h:body styleClass="BackGimage">
+            <h:form>
+            <h:outputLabel style="margin:auto;position:relative;top:40px;right:-460px;color:blue;font-size:20px;">Course ID</h:outputLabel>
+            <h:inputText style="border-color:red;margin:auto;position:relative;top:40px;right:-500px;color:black;font-size:20px;" value="#{courseBean.cid}"></h:inputText><br/>
+            <h:outputLabel style="margin:auto;position:relative;top:50px;right:-460px;color:blue;font-size:20px;">Course Name</h:outputLabel>
+            <h:inputText style="border-color:red;margin:auto;position:relative;top:50px;right:-500px;color:black;font-size:20px;" value="#{courseBean.cname}"></h:inputText><br/>
+            <h:outputLabel style="margin:auto;position:relative;top:60px;right:-460px;color:blue;font-size:20px;">Credit Hours</h:outputLabel>
+            <h:inputText style="border-color:red;margin:auto;position:relative;top:60px;right:-500px;color:black;font-size:20px;" value="#{courseBean.cdhours}"></h:inputText><br/>
+            <h:commandButton style="border-radius:15px 15px;margin:auto;position:relative;top:90px;right:-800px;color:blue;font-size:20px;" value="ADD"></h:commandButton>
+            <h:commandButton style="border-radius:15px 15px;margin:auto;position:relative;top:90px;right:-600px;color:blue;font-size:20px;" value="CANCEL"></h:commandButton>
+            <h:commandButton style="border-radius:15px 15px;margin:auto;position:relative;top:90px;right:-400px;color:blue;font-size:20px;" value="BACK" action="HomePage.xhtml"></h:commandButton>
+            </h:form>
+    </h:body>
+</html>
+
