@@ -4,3 +4,21 @@
                   border-radius:15px;
                   border: #ff0;
               }
+              .tableColumnID{
+                  background-color:yellow
+              }
+               .tableColumnNAME{
+                  background-color:blue;
+              }
+               .tableColumnAGE{
+                  background-color:greenyellow;
+              }
+               .tableColumnEMAIL{
+                  background-color:green;
+              }
+               .tableColumnGENDER{
+                  background-color:red;
+              }
+               .tableColumnPHONE{
+                  background-color:pink;
+              }

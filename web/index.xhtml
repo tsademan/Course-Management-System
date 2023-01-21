@@ -32,7 +32,7 @@
             <td  style="padding-left:180px;">
             <h:inputSecret value="#{firstBean.password}" styleClass="myformat" style="height:30px;width:200px;"/><br/>
             </td>
-            <h:commandButton value="LOGIN"  style="height:40px;width:80px;" action="/HomePage.xhtml" styleClass="myformat"/>
+            <h:commandButton value="LOGIN"  style="height:40px;width:80px;" action="#{firstBean.login()}" styleClass="myformat"/>
            </h:panelGroup>
              </div>
            </h:form>

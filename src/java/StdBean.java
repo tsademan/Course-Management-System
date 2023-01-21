@@ -81,31 +81,30 @@ public class StdBean {
     public void setGender(String gender) {
         this.gender = gender;
     } 
-    List<String> genderList;
+//    List<String> genderList;
 
-    public List<String> getGenderList() {
-        return genderList;
-    }
-
-    public void setGenderList(List<String> genderList) {
-        this.genderList = genderList;
-    }
- 
-    
-    public StdBean(){
-        genderList = new ArrayList<>();
-        genderList.add("Male");
-        genderList.add("Female");
-        genderList.add("Other");
-    }
-   public void profilerInsert() {
-        //List<FirstManagedBean> list = new ArrayList<>();
+//    public List<String> getGenderList() {
+//        return genderList;
+//    }
+//
+//    public void setGenderList(List<String> genderList) {
+//        this.genderList = genderList;
+//    }
+// 
+//    
+//    public StdBean(){
+//        genderList = new ArrayList<>();
+//        genderList.add("Male");
+//        genderList.add("Female");
+//        genderList.add("Other");
+//    }
+   public void StdData() {
         try {
             
             StdBean reg = new StdBean();
             DBConnection dbcon = new DBConnection();
             Connection con = dbcon.connMethod();
-            String sql = "Insert into STDTABEL(FIRSTNAME,LASTNAME,ID,EMAIL,AGE,PHONE,ADDRESS,GENDER) values(?,?,?,?,?,?,?,?)";
+            String sql = "Insert into STDTABEL(FNAME,LNAME,ID,EMAIL,AGE,PHONE,ADDRESS,GENDER) values(?,?,?,?,?,?,?,?)";
             PreparedStatement ps = con.prepareStatement(sql);
             ps.setString(1, FName);
             ps.setString(2, LName);
@@ -115,15 +114,8 @@ public class StdBean {
             ps.setString(6, phone);
             ps.setString(7, address);
             ps.setString(8,gender );
+            System.out.println("Inserted Successfully");
             ps.executeUpdate();
-////            String sql1 = "Insert into USERTBL(USERNAMEE,PASSWORD,USERTYPE) values(?,?,?)";
-////            PreparedStatement ps1 = con.prepareStatement(sql1);
-////            ps1.setString(1,user);
-////            ps1.setString(2, pwd);
-////            ps1.setString(3, userType);
-////            ps1.executeUpdate();
-//            System.err.println("success");
-//        } 
         }
 catch (Exception e) {
    }
