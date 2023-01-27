@@ -11,7 +11,7 @@ import javax.faces.bean.SessionScoped;
 public class StdBean {
     private String  FName;
     private String  LName;
-    private String   id;
+    private Long  id;
     private String  email;
     private  String    age;
     private String  phone;
@@ -34,11 +34,11 @@ public class StdBean {
         this.LName = LName;
     }
 
-    public String getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -81,23 +81,24 @@ public class StdBean {
     public void setGender(String gender) {
         this.gender = gender;
     } 
-//    List<String> genderList;
+   private List <String>genderList;
 
-//    public List<String> getGenderList() {
-//        return genderList;
-//    }
-//
-//    public void setGenderList(List<String> genderList) {
-//        this.genderList = genderList;
-//    }
-// 
-//    
-//    public StdBean(){
-//        genderList = new ArrayList<>();
-//        genderList.add("Male");
-//        genderList.add("Female");
-//        genderList.add("Other");
-//    }
+    public List<String> getGenderList() {
+        return genderList;
+    }
+
+    public void setGenderList(List<String> genderList) {
+        this.genderList = genderList;
+    }
+
+    public StdBean(){
+        genderList = new ArrayList<>();
+        genderList.add("Male");
+        genderList.add("Female");
+        genderList.add("Other");
+    }
+   
+
    public void StdData() {
         try {
             
@@ -108,7 +109,7 @@ public class StdBean {
             PreparedStatement ps = con.prepareStatement(sql);
             ps.setString(1, FName);
             ps.setString(2, LName);
-            ps.setString(3, id);
+            ps.setLong(3, id);
             ps.setString(4, email);
             ps.setString(5, age);
             ps.setString(6, phone);
@@ -119,5 +120,23 @@ public class StdBean {
         }
 catch (Exception e) {
    }
+
+
+PreparedStatement ps = null;
+Connection con = null;
+
+try
+{
+ 
+ps.executeUpdate();
+
+con.close();
+ps.close();
+}
+catch(Exception e)
+{
+e.printStackTrace();
 }
 }
+}
+ 

@@ -4,21 +4,24 @@
                   border-radius:15px;
                   border: #ff0;
               }
-              .tableColumnID{
-                  background-color:yellow
-              }
-               .tableColumnNAME{
-                  background-color:blue;
-              }
-               .tableColumnAGE{
-                  background-color:greenyellow;
-              }
-               .tableColumnEMAIL{
-                  background-color:green;
-              }
-               .tableColumnGENDER{
-                  background-color:red;
-              }
-               .tableColumnPHONE{
-                  background-color:pink;
-              }
+              .employeeTable {   
+   border-collapse:collapse;
+   border:1px solid #000000;
+}
+
+.employeeTableHeader {
+   text-align:center;
+   background:none repeat scroll 0 0 #B5B5B5;
+   border-bottom:1px solid #000000;  
+   padding:2px;
+}
+
+.employeeTableOddRow {
+   text-align:center;
+   background:none repeat scroll 0 0 blueviolet;	
+}
+
+.employeeTableEvenRow {
+   text-align:center;
+   background:none repeat scroll 0 0 #D3D3D3;
+}

@@ -33,19 +33,19 @@ public class FirstBean implements Serializable {
 
   
    
-    public String login() throws SQLException, ClassNotFoundException {
+    public String Login() throws SQLException, ClassNotFoundException {
         boolean valid =Secondbean.express1(username,password);
          if (valid) {
               DBConnection dbcon = new DBConnection();
             Connection con = dbcon.connMethod();
-            PreparedStatement ps = con.prepareStatement("select pass from loginTabel where user1=?");
+            PreparedStatement ps = con.prepareStatement("select PASS from logintable where USER1=?");
             ps.setString(1, username);       
             ResultSet rs = ps.executeQuery();
             rs.next();
-            String userType =rs.getString(1);
+             String userType =rs.getString(1);
             //HttpSession session = Session.getSession();
             //session.setAttribute("username", user);
-            if ("Admin".equals(username)) {
+            if ("logintable".equals(userType)) {
                 return "HomePage";
             } else {
                 return "HomePage";
@@ -59,7 +59,11 @@ public class FirstBean implements Serializable {
             return "index";
         }
     }
-
-  
-    
 }
+    
+
+
+
+
+    
+           

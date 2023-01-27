@@ -7,13 +7,46 @@ xmlns:f="http://java.sun.com/jsf/core"
 >
 <h:head>
 <title>Course Table</title>
+<style>
+ .courseTable {   
+   border-collapse:collapse;
+   border:1px solid #000000;
+}
+
+.courseTableHeader {
+    padding:160px;
+    
+   border-bottom:1px solid #BBBBBB;
+   text-align:center;
+   background:none repeat scroll 0 0 #B5B5B5;
+   border-bottom:1px solid #000000;  
+   padding:2px;
+}
+
+.courseTableOddRow {
+    
+    border-bottom:1px solid #BBBBBB;
+   text-align:center;
+   background:none repeat scroll 0 0 aqua;	
+}
+
+.courseTableEvenRow {
+    border-bottom:1px solid #BBBBBB;
+   text-align:center;
+   background:none repeat scroll 0 0 #D3D3D3;
+}
+</style>
 </h:head>
 
-<h:body>
+    <h:body style="min-width: 1366px;min-height: 768px;height: 100%;margin-left: 20px;background-color: yellow">
 
-<h1>COURSE DATA</h1>
+<h1 align="center" style="color:green">COURSE DATA</h1>
 
-<h:dataTable value="#{userBean.getUserList()}" var="u" border="1">
+
+<h:dataTable style="width:100%;background-color:greenyellow;color:blueviolet" value="#{userBean.getUserList()}" var="u" border="1"
+            styleClass = "courseTable"
+            headerClass = "courseTableHeader"
+            rowClasses = "courseTableOddRow,courseTableEvenRow">
 
 <h:column>
 <f:facet name="header">

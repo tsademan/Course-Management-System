@@ -32,7 +32,7 @@ while (rs.next())
 StdBean usr = new StdBean();
 usr.setFName(rs.getString("FName"));
 usr.setLName(rs.getString("LName"));
-usr.setId(rs.getString("id"));
+usr.setId(rs.getLong("id"));
 usr.setEmail(rs.getString("email"));
 usr.setAge(rs.getString("age"));
 usr.setPhone(rs.getString("phone"));

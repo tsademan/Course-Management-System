@@ -45,10 +45,29 @@ private String cid;
             ps.setString(1, cid);
             ps.setString(2, cname);
             ps.setString(3, cdhours);
+           
             ps.executeUpdate();
         }
              catch (ClassNotFoundException | SQLException e) {
         }
       
     }
+    public void deleteCourse(String id) {
+		
+		Connection connection = null;
+		PreparedStatement statement = null;
+		
+		try {
+			 CourseBean reg = new CourseBean();
+                        DBConnection dbcon = new DBConnection();
+                        Connection con = dbcon.connMethod();
+			String sql = "DELETE FROM CourseTable WHERE cid=?";
+			statement = connection.prepareStatement(sql);
+			statement.setString(1, cid);
+			statement.execute();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+	}
 }

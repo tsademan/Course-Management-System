@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <h:head>
+        <title>Delete</title>
+    </h:head>
+    <h:body>
+        <h:form style="background-color: cornsilk;align-items: center">
+            <h1 style="color:red;border-radius:15px 15px 15px 15px;font-family: monospace;font-size: 
+                     20px;position:relative;right:-500px;">Well Came!</h1>
+            <h1 style="color:red;border-radius:15px 15px 15px 15px;font-family: fantasy;font-size: 
+                     20px;position:relative;right:-500px;">Delete data from the record</h1>
+            <h:outputLabel value="Enter student id numer to delete personal data " style="color:red;border-radius:15px 15px 15px 15px;font-family: inherit;font-size: 
+                     20px;position:relative;right:-500px;"/>
+            <div>
+            <h:inputText value="#{stdDelete .id}" style="position:relative;right:-500px;top:40px"/>
+            </div>
+            <div>
+                <h:commandButton value="Delete" action="#{stdDelete.Delete}" onclick="deleted()" 
+                     style="color:red;border-radius:15px 15px 15px 15px;font-family: fantasy;font-size: 
+                     20px;position:relative;right:-500px;top:50px"/>
+            </div>
+        </h:form>
+         <SCRIPT for="message">
+            function deleted()
+            {
+              alert("Succesfully deleted.");
+            }
+        </SCRIPT>  
+    </h:body>
+</html>

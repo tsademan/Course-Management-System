@@ -25,14 +25,14 @@
               style="height:700px;width:1200px;text-align:center;"> 
             <h:outputLabel value="UserName" style="height:20px;width:100px;"/>
             <td  style="padding-left:180px;">
-                <h:inputText value="#{firstBean.username}" style="height:30px;width:200px;" styleClass="myformat"/><br/>
+                <h:inputText style="height:30px;width:200px;" styleClass="myformat" value="#{firstBean.username}"/><br/>
             </td>
               <h:outputLink id="lnk" value="#"/>
             <h:outputLabel value="PassWord"  style="height:30px; width:200px;"/>
             <td  style="padding-left:180px;">
-            <h:inputSecret value="#{firstBean.password}" styleClass="myformat" style="height:30px;width:200px;"/><br/>
+                <h:inputSecret styleClass="myformat" style="height:30px;width:200px;" value="#{firstBean.password}"/><br/>
             </td>
-            <h:commandButton value="LOGIN"  style="height:40px;width:80px;" action="#{firstBean.login()}" styleClass="myformat"/>
+            <h:commandButton value="LOGIN"  style="height:40px;width:80px;" action="HomePage" styleClass="myformat"/>
            </h:panelGroup>
              </div>
            </h:form>

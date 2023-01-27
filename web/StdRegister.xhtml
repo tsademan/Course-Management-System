@@ -2,7 +2,8 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"   
-      xmlns:h="http://java.sun.com/jsf/html">
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
     <h:head>
         <title>Registration</title>
       </h:head>
@@ -17,27 +18,64 @@
      <h:body styleClass="BackGimage">
          
          <h:form  styleClass="myformat">
-            <h:outputLabel styleClass="myformat" style="background-color:white;position:relative;top:10px; right:10px;color:#b92c28;margin:50px 50px 50px 500px ;font-family:initial;font-size:25px;">First Name</h:outputLabel>
-            <h:inputText styleClass="myformat" style="background-color:black;font-size:20px;color:white;position:relative;top:10px; right:10px;width:180px;height:30px;" value="#{stdBean.FName}"></h:inputText><br/>
-            <h:outputLabel style="background-color:white;position:relative;top:20px; right:10px;color:#b92c28;margin:500px 50px 50px 500px ;font-family:initial;font-size:25px;">Last Name</h:outputLabel>
-            <h:inputText styleClass="myformat" style="background-color:black;font-size:20px;color:white;position:relative;top:20px; right:10px;width:180px;height:30px;" value="#{stdBean.LName}"></h:inputText><br/>
-            <h:outputLabel style="background-color:white;position:relative;top:30px; right:10px;color:#b92c28;margin:-500px 30px 10px 500px;font-family:initial;font-size:25px;">id</h:outputLabel>
-            <h:inputText styleClass="myformat" style="background-color:black;font-size:20px;color:white;position:relative;top:30px; right:10px;width:180px;height:30px;" value="#{stdBean.id}"></h:inputText> <br/>
-            <h:outputLabel style="background-color:white;position:relative;top:40px; right:10px;color:#b92c28;margin:-500px 30px 10px 500px;font-family:initial;font-size:25px;">Email</h:outputLabel>
-            <h:inputText styleClass="myformat" style="background-color:black;font-size:20px;color:white;position:relative;top:40px; right:10px;width:180px;height:30px;padding:4px" value="#{stdBean.email}"></h:inputText> <br/>
-            <h:outputLabel style="background-color:white;position:relative;top:50px; right:10px;color: #b92c28;margin:-500px 30px 10px 500px;font-family:initial;font-size:25px;">Age</h:outputLabel>
-            <h:inputText styleClass="myformat" style="background-color:black;font-size:20px;color:white;position:relative;top:50px; right:10px;width:180px;height:30px;" value="#{stdBean.age}"></h:inputText> <br/>
-            <h:outputLabel style="background-color:white;position:relative;top:60px; right:10px;color: #b92c28;margin:-500px 30px 10px 500px;font-family:initial;font-size:25px;">Phone</h:outputLabel>
-            <h:inputText styleClass="myformat" style="background-color:black;font-size:20px;color:white;position:relative;top:60px; right:10px;width:180px;height:30px;" value="#{stdBean.phone}"></h:inputText> <br/>
-            <h:outputLabel style="background-color:white;position:relative;top:70px; right:10px;color:#b92c28;margin:-500px 30px 10px 500px;font-family:initial;font-size:25px;">Address</h:outputLabel>
-            <h:inputText styleClass="myformat" style="background-color:black;font-size:20px;color:white;position:relative;top:70px; right:10px;width:180px;height:30px;" value="#{stdBean.address}"></h:inputText> <br/>
-            <h:outputLabel style="background-color:white;position:relative;top:80px; right:10px;color: #b92c28;margin:-500px 30px 10px 500px;font-family:initial;font-size:25px;">Sex</h:outputLabel>
-            <h:inputText styleClass="myformat" style="background-color:black;font-size:20px;color:white;position:relative;top:80px; right:10px;width:180px;height:30px;" value="#{stdBean.gender}"></h:inputText> <br/>
-            
-            <h:commandButton style="border-radius:20px 20px;position:relative;top:90px; right:10px;color: blue;margin:-500px 30px 10px 650px;font-family:initial;font-size:25px;" value="REGISTER" action="#{stdBean.StdData()}" ></h:commandButton>
-            <h:commandButton style="border-radius:20px 20px;position:relative;top:90px; right:10px;color: blue;margin:50px 30px -100px 50px;font-family:initial;font-size:25px;"  value="VIEW" action="/StdData.xhtml"></h:commandButton>
-            <h:commandButton style="border-radius:20px 20px;position:relative;top:90px; right:600px;color: blue;margin:50px 30px -100px 50px;font-family:initial;font-size:25px;" value="BACK" action="HomePage.xhtml"></h:commandButton>
+            <h:outputLabel styleClass="myformat" style="background-color:white;position:relative;top:10px;
+             right:10px;color:#b92c28;margin:50px 50px 50px 500px ;font-family:initial;font-size:25px;">
+             First Name</h:outputLabel>
+            <h:inputText styleClass="myformat" style="background-color:black;font-size:20px;color:white;
+            position:relative;top:10px; right:10px;width:180px;height:30px;" value="#{stdBean.FName}">
+            </h:inputText><br/>
+            <h:outputLabel style="background-color:white;position:relative;top:20px; right:10px;color:#b92c28;
+            margin:500px 50px 50px 500px ;font-family:initial;font-size:25px;">Last Name</h:outputLabel>
+            <h:inputText styleClass="myformat" style="background-color:black;font-size:20px;color:white;
+            position:relative;top:20px; right:10px;width:180px;height:30px;" value="#{stdBean.LName}">
+            </h:inputText><br/>
+            <h:outputLabel style="background-color:white;position:relative;top:30px; right:10px;color:#b92c28;
+            margin:-500px 30px 10px 500px;font-family:initial;font-size:25px;">id</h:outputLabel>
+            <h:inputText styleClass="myformat" style="background-color:black;font-size:20px;color:white;
+             position:relative;top:30px; right:-100px;width:180px;height:30px;" value="#{stdBean.id}">
+            </h:inputText> <br/>
+            <h:outputLabel style="background-color:white;position:relative;top:40px; right:2px;color:#b92c28;
+             margin:-500px 30px 10px 500px;font-family:initial;font-size:25px;">Email</h:outputLabel>
+            <h:inputText styleClass="myformat" style="background-color:black;font-size:20px;color:white;
+            position:relative;top:40px; right:-50px;width:180px;height:30px;padding:4px" 
+            value="#{stdBean.email}"></h:inputText> <br/>
+            <h:outputLabel style="background-color:white;position:relative;top:50px; right:10px;color: #b92c28;
+             margin:-500px 30px 10px 500px;font-family:initial;font-size:25px;">Age</h:outputLabel>
+            <h:inputText styleClass="myformat" style="background-color:black;font-size:20px;color:white;
+            position:relative;top:50px; right:-80px;width:180px;height:30px;" value="#{stdBean.age}">
+            </h:inputText> <br/>
+            <h:outputLabel style="background-color:white;position:relative;top:60px; right:10px;color: #b92c28;
+             margin:-500px 30px 10px 500px;font-family:initial;font-size:25px;">Phone</h:outputLabel>
+            <h:inputText styleClass="myformat" style="background-color:black;font-size:20px;color:white;
+            position:relative;top:60px; right:-60px;width:180px;height:30px;" value="#{stdBean.phone}">
+            </h:inputText> <br/>
+            <h:outputLabel style="background-color:white;position:relative;top:70px; right:10px;color:#b92c28;
+             margin:-500px 30px 10px 500px;font-family:initial;font-size:25px;">Address</h:outputLabel>
+            <h:inputText styleClass="myformat" style="background-color:black;font-size:20px;color:white;
+            position:relative;top:70px; right:-40px;width:180px;height:30px;" value="#{stdBean.address}">
+            </h:inputText> <br/>
+            <h:outputLabel style="background-color:white;color:#b92c28;font-family:initial;font-size:25px;
+            position:relative;top:90px;right:-495px;" value="Sex"></h:outputLabel>
+            <h:selectOneRadio style="font-family:initial;font-size:25px;position:relative;top:70px;right:-580px;" 
+             value="#{stdBean.gender}" >
+              <f:selectItems  value="#{stdBean.genderList}"/>
+             </h:selectOneRadio>
+            <h:commandButton style="border-radius:20px 20px;position:relative;top:110px;
+            right:10px;color: blue;margin:-500px 30px 10px 650px;font-family:initial;font-size:25px;" 
+            value="REGISTER" action="#{stdBean.StdData()}" onclick="inserted()"></h:commandButton>
+            <h:commandButton style="border-radius:20px 20px;position:relative;top:110px; right:10px;
+            color: blue;margin:50px 30px -100px 50px;font-family:initial;font-size:25px;"  value="VIEW" 
+            action="/StdData.xhtml"></h:commandButton>
+            <h:commandButton style="border-radius:20px 20px;position:relative;top:110px; right:600px;
+            color: blue;margin:50px 30px -100px 50px;font-family:initial;font-size:25px;" value="BACK"
+            action="StdDelete"></h:commandButton>
          </h:form>
+           <SCRIPT for="message">
+            function inserted()
+            {
+              alert("Succesfully inserted.");
+            }
+        </SCRIPT>
      </h:body>
 </html>
 
