@@ -11,6 +11,7 @@ public class GradeBean {
   private Long sid;
   private Long cid;
   private Long score;
+  //private String description;
 
     public Long getSid() {
         return sid;
@@ -42,7 +43,7 @@ public class GradeBean {
             StdBean reg = new StdBean();
             DBConnection dbcon = new DBConnection();
             Connection con = dbcon.connMethod();
-            String sql = "Insert into GradeTable(SID,CID,SCORE) values(?,?,?)";
+            String sql = "Insert into CourseTable(CID,SID,SCORE) values(?,?,?)";
             PreparedStatement ps = con.prepareStatement(sql);
             ps.setLong(1, sid);
             ps.setLong(2, cid);

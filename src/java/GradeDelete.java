@@ -7,7 +7,7 @@ import javax.faces.bean.RequestScoped;
 
 @ManagedBean
 @RequestScoped
-public class StdDelete {
+public class GradeDelete {
 
  private Long id;
 
@@ -24,7 +24,7 @@ public class StdDelete {
     try{
     DBConnection db=new DBConnection();
     Connection con=db.connMethod();
-    PreparedStatement ps=con.prepareStatement("Delete from STDTABLE where id=?");
+    PreparedStatement ps=con.prepareStatement("Delete from COURSETABLE3 where sid=?");
     ps.setLong(1,id);
     ps.executeUpdate();
     }
@@ -33,3 +33,5 @@ public class StdDelete {
     }
     }  
 }
+
+    

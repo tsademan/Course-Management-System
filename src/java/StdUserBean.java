@@ -23,8 +23,8 @@ ResultSet rs = null;
 try
 {
 Class.forName("oracle.jdbc.driver.OracleDriver");
-con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe", "SYSTEM", "4309");
-String sql = "select * from STDTABEL";
+con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe", "TSADE", "4309");
+String sql = "select * from STDTABLE";
 ps= con.prepareStatement(sql); 
 rs= ps.executeQuery(); 
 while (rs.next())

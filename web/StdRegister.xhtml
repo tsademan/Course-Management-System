@@ -9,71 +9,75 @@
       </h:head>
       <style>
             .BackGimage{
-             background-image: url("resources/images/oh2.jpg");
-             background-size:50%;
+             background-image: url("resources/images/on1.jpg");
+             background-size:100%;
             }   
         </style>
      <link href="./resources/css/mainStyle.css" rel="stylesheet" type="text/css"/>
      <h:form style="margin:20px 20px 20px 550px;font-size:40px;color:blue">STUDENT REGISTER</h:form>
+     
      <h:body styleClass="BackGimage">
          
          <h:form  styleClass="myformat">
-            <h:outputLabel styleClass="myformat" style="background-color:white;position:relative;top:10px;
-             right:10px;color:#b92c28;margin:50px 50px 50px 500px ;font-family:initial;font-size:25px;">
+            <h:outputLabel styleClass="myformat" style="position:relative;top:10px;
+             right:10px;color: black;margin:50px 50px 50px 500px ;font-family:initial;font-size:25px;">
              First Name</h:outputLabel>
-            <h:inputText styleClass="myformat" style="background-color:black;font-size:20px;color:white;
+            <h:inputText styleClass="myformat" style="background-color:#b92c28;font-size:20px;color:white;
             position:relative;top:10px; right:10px;width:180px;height:30px;" value="#{stdBean.FName}">
             </h:inputText><br/>
-            <h:outputLabel style="background-color:white;position:relative;top:20px; right:10px;color:#b92c28;
+            <h:outputLabel style="position:relative;top:20px; right:10px;color:black;
             margin:500px 50px 50px 500px ;font-family:initial;font-size:25px;">Last Name</h:outputLabel>
-            <h:inputText styleClass="myformat" style="background-color:black;font-size:20px;color:white;
+            <h:inputText styleClass="myformat" style="background-color:#b92c28;font-size:20px;color:white;
             position:relative;top:20px; right:10px;width:180px;height:30px;" value="#{stdBean.LName}">
             </h:inputText><br/>
-            <h:outputLabel style="background-color:white;position:relative;top:30px; right:10px;color:#b92c28;
+            <h:outputLabel style="position:relative;top:30px; right:10px;color:black;
             margin:-500px 30px 10px 500px;font-family:initial;font-size:25px;">id</h:outputLabel>
-            <h:inputText styleClass="myformat" style="background-color:black;font-size:20px;color:white;
+            <h:inputText styleClass="myformat" style="background-color:#b92c28;font-size:20px;color:white;
              position:relative;top:30px; right:-100px;width:180px;height:30px;" value="#{stdBean.id}">
             </h:inputText> <br/>
-            <h:outputLabel style="background-color:white;position:relative;top:40px; right:2px;color:#b92c28;
+            <h:outputLabel style="position:relative;top:40px; right:2px;color:black;
              margin:-500px 30px 10px 500px;font-family:initial;font-size:25px;">Email</h:outputLabel>
-            <h:inputText styleClass="myformat" style="background-color:black;font-size:20px;color:white;
+            <h:inputText styleClass="myformat" style="background-color:#b92c28;font-size:20px;color:white;
             position:relative;top:40px; right:-50px;width:180px;height:30px;padding:4px" 
             value="#{stdBean.email}"></h:inputText> <br/>
-            <h:outputLabel style="background-color:white;position:relative;top:50px; right:10px;color: #b92c28;
+            <h:outputLabel style="position:relative;top:50px; right:10px;color:black;
              margin:-500px 30px 10px 500px;font-family:initial;font-size:25px;">Age</h:outputLabel>
-            <h:inputText styleClass="myformat" style="background-color:black;font-size:20px;color:white;
+            <h:inputText styleClass="myformat" style="background-color:#b92c28;font-size:20px;color:white;
             position:relative;top:50px; right:-80px;width:180px;height:30px;" value="#{stdBean.age}">
             </h:inputText> <br/>
-            <h:outputLabel style="background-color:white;position:relative;top:60px; right:10px;color: #b92c28;
+            <h:outputLabel style="position:relative;top:60px; right:10px;color:black;
              margin:-500px 30px 10px 500px;font-family:initial;font-size:25px;">Phone</h:outputLabel>
-            <h:inputText styleClass="myformat" style="background-color:black;font-size:20px;color:white;
+            <h:inputText styleClass="myformat" style="background-color:#b92c28;font-size:20px;color:white;
             position:relative;top:60px; right:-60px;width:180px;height:30px;" value="#{stdBean.phone}">
             </h:inputText> <br/>
-            <h:outputLabel style="background-color:white;position:relative;top:70px; right:10px;color:#b92c28;
+            <h:outputLabel style="position:relative;top:70px; right:10px;color:black;
              margin:-500px 30px 10px 500px;font-family:initial;font-size:25px;">Address</h:outputLabel>
-            <h:inputText styleClass="myformat" style="background-color:black;font-size:20px;color:white;
+            <h:inputText styleClass="myformat" style="background-color:#b92c28;font-size:20px;color:white;
             position:relative;top:70px; right:-40px;width:180px;height:30px;" value="#{stdBean.address}">
             </h:inputText> <br/>
-            <h:outputLabel style="background-color:white;color:#b92c28;font-family:initial;font-size:25px;
+            <h:outputLabel style="color:black;font-family:initial;font-size:25px;
             position:relative;top:90px;right:-495px;" value="Sex"></h:outputLabel>
-            <h:selectOneRadio style="font-family:initial;font-size:25px;position:relative;top:70px;right:-580px;" 
+            <h:selectOneRadio style="background-color:white;color:black;font-family:initial;font-size:25px;position:relative;top:70px;right:-580px;" 
              value="#{stdBean.gender}" >
               <f:selectItems  value="#{stdBean.genderList}"/>
              </h:selectOneRadio>
             <h:commandButton style="border-radius:20px 20px;position:relative;top:110px;
-            right:10px;color: blue;margin:-500px 30px 10px 650px;font-family:initial;font-size:25px;" 
+            right:-50px;color: blue;margin:-500px 30px 10px 650px;font-family:initial;font-size:25px;" 
             value="REGISTER" action="#{stdBean.StdData()}" onclick="inserted()"></h:commandButton>
             <h:commandButton style="border-radius:20px 20px;position:relative;top:110px; right:10px;
             color: blue;margin:50px 30px -100px 50px;font-family:initial;font-size:25px;"  value="VIEW" 
             action="/StdData.xhtml"></h:commandButton>
-            <h:commandButton style="border-radius:20px 20px;position:relative;top:110px; right:600px;
+            <h:commandButton style="border-radius:20px 20px;position:relative;top:110px; right:80px;
             color: blue;margin:50px 30px -100px 50px;font-family:initial;font-size:25px;" value="BACK"
+            action="HomePage"></h:commandButton>
+            <h:commandButton style="border-radius:20px 20px;position:relative;top:110px; right:130px;
+            color: blue;margin:50px 30px -100px 50px;font-family:initial;font-size:25px;" value="DELET"
             action="StdDelete"></h:commandButton>
          </h:form>
            <SCRIPT for="message">
             function inserted()
             {
-              alert("Succesfully inserted.");
+              alert("Succesfully Registered.");
             }
         </SCRIPT>
      </h:body>

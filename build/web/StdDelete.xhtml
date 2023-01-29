@@ -15,12 +15,15 @@
             <h:outputLabel value="Enter student id numer to delete personal data " style="color:red;border-radius:15px 15px 15px 15px;font-family: inherit;font-size: 
                      20px;position:relative;right:-500px;"/>
             <div>
-            <h:inputText value="#{stdDelete .id}" style="position:relative;right:-500px;top:40px"/>
+            <h:inputText value="#{stdDelete.id}" style="position:relative;right:-500px;top:40px"/>
             </div>
             <div>
                 <h:commandButton value="Delete" action="#{stdDelete.Delete}" onclick="deleted()" 
                      style="color:red;border-radius:15px 15px 15px 15px;font-family: fantasy;font-size: 
                      20px;position:relative;right:-500px;top:50px"/>
+                   <h:commandButton value="Back" action="StdRegister"
+                     style="color:red;border-radius:15px 15px 15px 15px;font-family: fantasy;font-size: 
+                     20px;position:relative;right:-510px;top:50px"/>
             </div>
         </h:form>
          <SCRIPT for="message">

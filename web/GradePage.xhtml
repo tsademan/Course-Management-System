@@ -8,16 +8,15 @@
     </h:head>
     <h:body>
         <h:form>
-            <h:outputLabel style="color:green;position:relative;right:-500px;top:70px;font-size:20px;font-family: fantasy">Student Id</h:outputLabel> <br/>
-            <h:inputText style="color:yellow;border-radius:15px 15px 15px15px;position:relative;right:-630px;top:50px;" value="#{gradeBean.sid}"></h:inputText><br/>
-             <h:outputLabel style="color:green;position:relative;right:-500px;top:80px;font-size:20px;font-family: fantasy">Course Id</h:outputLabel> <br/>
-            <h:inputText style="color:yellow;border-radius:15px 15px 15px15px;position:relative;right:-630px;top:60px;" value="#{gradeBean.cid}"></h:inputText><br/>
-            <h:outputLabel style="color:green;position:relative;right:-500px;top:90px;font-size:20px;font-family: fantasy">Score</h:outputLabel> <br/>
-            <h:inputText style="color:yellow;border-radius:15px 15px 15px15px;position:relative;right:-630px;top:70px;" value="#{gradeBean.score}"></h:inputText><br/>
-            <h:commandButton style="color:blue;font-family: serif;font-size:20px;position:relative;right:-510px;top:100px;" value="ADD" action="#{gradeBean.StdGrade()}"/>
-            <h:commandButton style="color:blue;font-family: serif;font-size:20px;position:relative;right:-520px;top:100px;" value="DELETE" action="#{gradeBean.StdGrade()}"/>
-            <h:commandButton style="color:blue;font-family: serif;font-size:20px;position:relative;right:-530px;top:100px;" value="VIEW" action="#{gradeBean.StdGrade()}"/>
-            <h:commandButton style="color:blue;font-family: serif;font-size:20px;position:relative;right:-540px;top:100px;" value="BACK" action="HomePage"/>
+            <h:commandButton style="border-radius:40px 40px 40px 40px;width:200px;height:70px;background-color:pink;
+     color:blue;font-family: serif;font-size:20px;position:relative;
+     right:-110px;top:100px;" value="UPDATE"/>
+            <h:commandButton style="border-radius:40px 40px 40px 40px;width:200px;height:70px;background-color:pink;
+   color:blue;font-family: serif;font-size:20px;position:relative;right:-250px;top:100px;" value="DELETE" action="GradeDelete"/>
+            <h:commandButton style="border-radius:40px 40px 40px 40px;width:200px;height:70px;background-color:pink;
+         color:blue;font-family: serif;font-size:20px;position:relative;right:-350px;top:100px;" value="VIEW" action="GradeData"/>
+            <h:commandButton style="border-radius:40px 40px 40px 40px;width:200px;height:70px;background-color:pink;
+        color:blue;font-family: serif;font-size:20px;position:relative;right:-500px;top:100px;" value="BACK" action="HomePage"/>
         </h:form>
     </h:body>
 </html>

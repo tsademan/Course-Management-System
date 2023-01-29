@@ -1,6 +1,7 @@
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 import javax.faces.bean.ManagedBean;
@@ -9,6 +10,79 @@ import javax.faces.bean.SessionScoped;
 @ManagedBean
 @SessionScoped
 public class StdBean {
+    private String cname;
+private String cdhours;
+private String cid;
+private String descr;
+
+    public String getDescr() {
+        return descr;
+    }
+
+    public void setDescr(String descr) {
+        this.descr = descr;
+    }
+private Long score;
+private Long sid;
+
+    public Long getSid() {
+        return sid;
+    }
+
+    public void setSid(Long sid) {
+        this.sid = sid;
+    }
+
+    public Long getScore() {
+        return score;
+    }
+
+    public void setScore(Long score) {
+        this.score = score;
+    }
+    public String getCid() {
+        return cid;
+    }
+
+    public void setCid(String cid) {
+        this.cid = cid;
+    }
+
+    public String getCname() {
+        return cname;
+    }
+
+    public void setCname(String cname) {
+        this.cname = cname;
+    }
+
+    public String getCdhours() {
+        return cdhours;
+    }
+
+    public void setCdhours(String cdhours) {
+        this.cdhours = cdhours;
+    }
+    public void CourseData(){
+        try {     
+            CourseBean reg = new CourseBean();
+            DBConnection dbcon = new DBConnection();
+            Connection con = dbcon.connMethod();
+            String sql = "Insert into CourseTable(CID,CNAME,CDHOURS,SCORE,SID,DESCR) values(?,?,?,?,?,?)";
+            PreparedStatement ps = con.prepareStatement(sql);
+            ps.setString(1, cid);
+            ps.setString(2, cname);
+            ps.setString(3, cdhours);
+            ps.setLong(4, score);
+            ps.setLong(5, sid);
+            ps.setString(6, descr);
+           
+            ps.executeUpdate();
+        }
+             catch (ClassNotFoundException | SQLException e) {
+        }
+      
+    }
     private String  FName;
     private String  LName;
     private Long  id;
@@ -99,13 +173,13 @@ public class StdBean {
     }
    
 
-   public void StdData() {
+   public void StdData() throws SQLException {
         try {
             
             StdBean reg = new StdBean();
             DBConnection dbcon = new DBConnection();
             Connection con = dbcon.connMethod();
-            String sql = "Insert into STDTABEL(FNAME,LNAME,ID,EMAIL,AGE,PHONE,ADDRESS,GENDER) values(?,?,?,?,?,?,?,?)";
+            String sql = "Insert into STDTABLE(FNAME,LNAME,ID,EMAIL,AGE,PHONE,ADDRESS,GENDER) values(?,?,?,?,?,?,?,?)";
             PreparedStatement ps = con.prepareStatement(sql);
             ps.setString(1, FName);
             ps.setString(2, LName);
@@ -115,8 +189,8 @@ public class StdBean {
             ps.setString(6, phone);
             ps.setString(7, address);
             ps.setString(8,gender );
-            System.out.println("Inserted Successfully");
             ps.executeUpdate();
+           
         }
 catch (Exception e) {
    }

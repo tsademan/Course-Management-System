@@ -19,14 +19,21 @@ xmlns:f="http://java.sun.com/jsf/core"
         <h:body styleClass="BackGimage">
             <h:form>
             <h:outputLabel style="margin:auto;position:relative;top:40px;right:-460px;color:blue;font-size:20px;">Course ID</h:outputLabel>
-            <h:inputText style="border-color:red;margin:auto;position:relative;top:40px;right:-500px;color:black;font-size:20px;" value="#{courseBean.cid}"></h:inputText><br/>
+            <h:inputText style="border-radius:15px 15px 15px 15px;border-color:red;margin:auto;position:relative;top:40px;right:-527px;color:black;font-size:20px;" value="#{courseBean.cid}"></h:inputText><br/>
             <h:outputLabel style="margin:auto;position:relative;top:50px;right:-460px;color:blue;font-size:20px;">Course Name</h:outputLabel>
-            <h:inputText style="border-color:red;margin:auto;position:relative;top:50px;right:-500px;color:black;font-size:20px;" value="#{courseBean.cname}"></h:inputText><br/>
+            <h:inputText style="border-radius:15px 15px 15px 15px;border-color:red;margin:auto;position:relative;top:50px;right:-500px;color:black;font-size:20px;" value="#{courseBean.cname}"></h:inputText><br/>
             <h:outputLabel style="margin:auto;position:relative;top:60px;right:-460px;color:blue;font-size:20px;">Credit Hours</h:outputLabel>
-            <h:inputText style="border-color:red;margin:auto;position:relative;top:60px;right:-500px;color:black;font-size:20px;" value="#{courseBean.cdhours}"></h:inputText><br/>
-            <h:commandButton style="border-radius:15px 15px;margin:auto;position:relative;top:90px;right:-820px;color:blue;font-size:20px;" value="ADD" action="#{courseBean.CourseData()}"></h:commandButton>
-            <h:commandButton style="border-radius:15px 15px;margin:auto;position:relative;top:90px;right:-620px;color:blue;font-size:20px;" value="VIEW" action="/CourseData.xhtml"></h:commandButton>
-            <h:commandButton style="border-radius:15px 15px;margin:auto;position:relative;top:90px;right:-420px;color:blue;font-size:20px;" value="BACK" action="HomePage.xhtml"></h:commandButton>
+            <h:inputText style="border-radius:15px 15px 15px 15px;border-color:red;margin:auto;position:relative;top:60px;right:-505px;color:black;font-size:20px;" value="#{courseBean.cdhours}"></h:inputText><br/>
+            <h:outputLabel style="margin:auto;position:relative;top:70px;right:-460px;color:blue;font-size:20px;">Score</h:outputLabel>
+            <h:inputText style="border-radius:15px 15px 15px 15px;border-color:red;margin:auto;position:relative;top:70px;right:-564px;color:black;font-size:20px;" value="#{courseBean.score}"></h:inputText><br/>
+            <h:outputLabel style="margin:auto;position:relative;top:80px;right:-460px;color:blue;font-size:20px;">SID</h:outputLabel>
+            <h:inputText style="border-radius:15px 15px 15px 15px;border-color:red;margin:auto;position:relative;top:80px;right:-578px;color:black;font-size:20px;" value="#{courseBean.sid}"></h:inputText><br/>
+             <h:outputLabel style="margin:auto;position:relative;top:90px;right:-460px;color:blue;font-size:20px;">Description</h:outputLabel>
+            <h:inputText style="border-radius:15px 15px 15px 15px;border-color:red;margin:auto;position:relative;top:90px;right:-517px;color:black;font-size:20px;" value="#{courseBean.descr}"></h:inputText><br/>
+            
+            <h:commandButton style="border-radius:15px 15px;margin:auto;position:relative;top:110px;right:-820px;color:blue;font-size:20px;" value="ADD" action="#{courseBean.CourseData()}"></h:commandButton>
+            <h:commandButton style="border-radius:15px 15px;margin:auto;position:relative;top:110px;right:-620px;color:blue;font-size:20px;" value="VIEW" action="/CourseData.xhtml"></h:commandButton>
+            <h:commandButton style="border-radius:15px 15px;margin:auto;position:relative;top:110px;right:-420px;color:blue;font-size:20px;" value="BACK" action="HomePage.xhtml"></h:commandButton>
             <h:commandButton type="reset" style="border-radius:15px 15px;margin:auto;position:relative;top:90px;right:-200px;color:blue;font-size:20px;" value="CANCEL" action="HomePage.xhtml"></h:commandButton>
             </h:form>
     </h:body>

@@ -11,7 +11,33 @@ public class CourseBean {
 private String cname;
 private String cdhours;
 private String cid;
+private Long score;
+private Long sid;
+private String descr;
 
+    public String getDescr() {
+        return descr;
+    }
+
+    public void setDescr(String descr) {
+        this.descr = descr;
+    }
+
+    public Long getSid() {
+        return sid;
+    }
+
+    public void setSid(Long sid) {
+        this.sid = sid;
+    }
+
+    public Long getScore() {
+        return score;
+    }
+
+    public void setScore(Long score) {
+        this.score = score;
+    }
     public String getCid() {
         return cid;
     }
@@ -40,11 +66,14 @@ private String cid;
             CourseBean reg = new CourseBean();
             DBConnection dbcon = new DBConnection();
             Connection con = dbcon.connMethod();
-            String sql = "Insert into CourseTable(CID,CNAME,CDHOURS) values(?,?,?)";
+            String sql = "Insert into CourseTable3(CID,CNAME,CDHOURS,SCORE,SID,DESCR) values(?,?,?,?,?,?)";
             PreparedStatement ps = con.prepareStatement(sql);
             ps.setString(1, cid);
             ps.setString(2, cname);
             ps.setString(3, cdhours);
+            ps.setLong(4, score);
+            ps.setLong(5, sid);
+            ps.setString(6, descr);
            
             ps.executeUpdate();
         }
@@ -61,7 +90,7 @@ private String cid;
 			 CourseBean reg = new CourseBean();
                         DBConnection dbcon = new DBConnection();
                         Connection con = dbcon.connMethod();
-			String sql = "DELETE FROM CourseTable WHERE cid=?";
+			String sql = "DELETE FROM CourseTable3 WHERE cid=?";
 			statement = connection.prepareStatement(sql);
 			statement.setString(1, cid);
 			statement.execute();
