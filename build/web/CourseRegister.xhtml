@@ -13,6 +13,12 @@ xmlns:f="http://java.sun.com/jsf/core"
              background-image: url("resources/images/oh3.jpg");
              background-size:100%;
             }
+            .form1{
+                border-radius: 50px 50px 50px 50px;
+                color: blue;background-color:greenyellow;
+                width:130px;height:50px;
+                font-family: initial;font-size:30px;
+            }
         </style>
          <link href="./resources/css/mainStyle.css" rel="stylesheet" type="text/css"/>
    
@@ -31,10 +37,10 @@ xmlns:f="http://java.sun.com/jsf/core"
              <h:outputLabel style="margin:auto;position:relative;top:90px;right:-460px;color:blue;font-size:20px;">Description</h:outputLabel>
             <h:inputText style="border-radius:15px 15px 15px 15px;border-color:red;margin:auto;position:relative;top:90px;right:-517px;color:black;font-size:20px;" value="#{courseBean.descr}"></h:inputText><br/>
             
-            <h:commandButton style="border-radius:15px 15px;margin:auto;position:relative;top:110px;right:-820px;color:blue;font-size:20px;" value="ADD" action="#{courseBean.CourseData()}"></h:commandButton>
-            <h:commandButton style="border-radius:15px 15px;margin:auto;position:relative;top:110px;right:-620px;color:blue;font-size:20px;" value="VIEW" action="/CourseData.xhtml"></h:commandButton>
-            <h:commandButton style="border-radius:15px 15px;margin:auto;position:relative;top:110px;right:-420px;color:blue;font-size:20px;" value="BACK" action="HomePage.xhtml"></h:commandButton>
-            <h:commandButton type="reset" style="border-radius:15px 15px;margin:auto;position:relative;top:90px;right:-200px;color:blue;font-size:20px;" value="CANCEL" action="HomePage.xhtml"></h:commandButton>
+            <h:commandButton styleClass="form1" style="position:relative;top:130px;right:-510px " value="ADD" action="#{courseBean.CourseData()}"></h:commandButton>
+            <h:commandButton styleClass="form1"  style="position:relative;top:130px;right:-530px " value="VIEW" action="/CourseData.xhtml"></h:commandButton>
+            <h:commandButton styleClass="form1"  style="position:relative;top:130px;right:-550px " value="BACK" action="HomePage.xhtml"></h:commandButton>
+          
             </h:form>
     </h:body>
 

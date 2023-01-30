@@ -32,9 +32,14 @@
             <td  style="padding-left:180px;">
                 <h:inputSecret styleClass="myformat" style="height:30px;width:200px;" value="#{firstBean.password}"/><br/>
             </td>
-            <h:commandButton value="LOGIN"  style="height:40px;width:80px;" action="HomePage" styleClass="myformat"/>
+            <h:commandButton value="LOGIN"  style="height:40px;width:80px;" action="#{firstBean.Login()}"  onclick=" firstBean.Login();" styleClass="myformat"/>
            </h:panelGroup>
              </div>
            </h:form>
+        <script>
+    jQuery(document).ready(function() {
+        firstBean.Login();
+    });
+</script>
     </body>
 </html>

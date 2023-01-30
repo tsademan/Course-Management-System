@@ -12,6 +12,34 @@
              background-image: url("resources/images/on1.jpg");
              background-size:100%;
             }   
+            .form1{
+                border-radius:150px 150px 150px 150px;
+                position:relative;top:-220px;right:-1000px;bottom: 100px;
+                background-clip:padding-box;background-color:blueviolet;
+                color:black;
+                font-family:initial;font-size:40px;width:220px;height:90px;
+            }
+               .form2{
+                border-radius:150px 150px 150px 150px;
+                position:relative;top:-200px;right:-1000px;bottom: 100px;
+                background-clip:padding-box;background-color:blueviolet;
+                color:black;
+                font-family:initial;font-size:40px;width:220px;height:90px;
+            }
+               .form3{
+                border-radius:150px 150px 150px 150px;
+                position:relative;top:-180px;right:-1000px;bottom: 100px;
+                background-clip:padding-box;background-color:blueviolet;
+                color:black;
+                font-family:initial;font-size:40px;width:220px;height:90px;
+            }
+               .form4{
+                 border-radius:150px 150px 150px 150px;
+                position:relative;top:-160px;right:-1000px;bottom: 100px;
+                background-clip:padding-box;background-color:blueviolet;
+                color:black;
+                font-family:initial;font-size:40px;width:220px;height:90px;
+            }
         </style>
      <link href="./resources/css/mainStyle.css" rel="stylesheet" type="text/css"/>
      <h:form style="margin:20px 20px 20px 550px;font-size:40px;color:blue">STUDENT REGISTER</h:form>
@@ -38,7 +66,7 @@
             <h:outputLabel style="position:relative;top:40px; right:2px;color:black;
              margin:-500px 30px 10px 500px;font-family:initial;font-size:25px;">Email</h:outputLabel>
             <h:inputText styleClass="myformat" style="background-color:#b92c28;font-size:20px;color:white;
-            position:relative;top:40px; right:-50px;width:180px;height:30px;padding:4px" 
+            position:relative;top:40px; right:-50px;width:180px;height:30px;" 
             value="#{stdBean.email}"></h:inputText> <br/>
             <h:outputLabel style="position:relative;top:50px; right:10px;color:black;
              margin:-500px 30px 10px 500px;font-family:initial;font-size:25px;">Age</h:outputLabel>
@@ -61,19 +89,16 @@
              value="#{stdBean.gender}" >
               <f:selectItems  value="#{stdBean.genderList}"/>
              </h:selectOneRadio>
-            <h:commandButton style="border-radius:20px 20px;position:relative;top:110px;
-            right:-50px;color: blue;margin:-500px 30px 10px 650px;font-family:initial;font-size:25px;" 
-            value="REGISTER" action="#{stdBean.StdData()}" onclick="inserted()"></h:commandButton>
-            <h:commandButton style="border-radius:20px 20px;position:relative;top:110px; right:10px;
-            color: blue;margin:50px 30px -100px 50px;font-family:initial;font-size:25px;"  value="VIEW" 
-            action="/StdData.xhtml"></h:commandButton>
-            <h:commandButton style="border-radius:20px 20px;position:relative;top:110px; right:80px;
-            color: blue;margin:50px 30px -100px 50px;font-family:initial;font-size:25px;" value="BACK"
-            action="HomePage"></h:commandButton>
-            <h:commandButton style="border-radius:20px 20px;position:relative;top:110px; right:130px;
-            color: blue;margin:50px 30px -100px 50px;font-family:initial;font-size:25px;" value="DELET"
-            action="StdDelete"></h:commandButton>
-         </h:form>
+            <h:commandButton value="REGISTER" styleClass="form1" action="#{stdBean.StdData()}" onclick="inserted()"></h:commandButton><br/>
+            
+            <h:commandButton styleClass="form2"  value="VIEW" 
+            action="/StdData.xhtml"></h:commandButton><br/>
+            
+            <h:commandButton  value="BACK" styleClass="form3"
+                              action="HomePage"></h:commandButton><br/>
+            <h:commandButton styleClass="form4" value="DELET"
+            action="StdDelete"></h:commandButton>-->
+         </h:form>-->
            <SCRIPT for="message">
             function inserted()
             {

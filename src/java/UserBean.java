@@ -23,7 +23,7 @@ try
 {
 Class.forName("oracle.jdbc.driver.OracleDriver");
 con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe", "TSADE", "4309");
-String sql = "select * from COURSETABLE";
+String sql = "select * from COURSETABLE3";
 ps= con.prepareStatement(sql); 
 rs= ps.executeQuery(); 
 while (rs.next())

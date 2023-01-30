@@ -29,26 +29,23 @@ public class FirstBean implements Serializable {
     public void setPassword(String password) {
         this.password = password;
     }
-   
 
-  
-   
     public String Login() throws SQLException, ClassNotFoundException {
         boolean valid =Secondbean.express1(username,password);
          if (valid) {
               DBConnection dbcon = new DBConnection();
             Connection con = dbcon.connMethod();
-            PreparedStatement ps = con.prepareStatement("select PASS from logintable where USER1=?");
+            PreparedStatement ps = con.prepareStatement("select USERNAME from logintable2 where USERNAME=?");
             ps.setString(1, username);       
             ResultSet rs = ps.executeQuery();
             rs.next();
              String userType =rs.getString(1);
-            //HttpSession session = Session.getSession();
-            //session.setAttribute("username", user);
-            if ("logintable".equals(userType)) {
+    
+            if ("Admin".equals(userType)) {
                 return "HomePage";
-            } else {
-                return "HomePage";
+            } 
+            else {
+                return "welcome";
             }
         } else {
             FacesContext.getCurrentInstance().addMessage(
