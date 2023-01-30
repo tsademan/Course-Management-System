@@ -91,11 +91,11 @@
              </h:selectOneRadio>
             <h:commandButton value="REGISTER" styleClass="form1" action="#{stdBean.StdData()}" onclick="inserted()"></h:commandButton><br/>
             
-            <h:commandButton styleClass="form2"  value="VIEW" 
-            action="/StdData.xhtml"></h:commandButton><br/>
+            <h:commandButton styleClass="form2"  value="VIEW"
+                             action="/StdData.xhtml" onclick="inserted1()"></h:commandButton><br/>
             
             <h:commandButton  value="BACK" styleClass="form3"
-                              action="HomePage"></h:commandButton><br/>
+                              action="HomePage" onclick="inserted2()"></h:commandButton><br/>
             <h:commandButton styleClass="form4" value="DELET"
             action="StdDelete"></h:commandButton>-->
          </h:form>-->
@@ -104,7 +104,20 @@
             {
               alert("Succesfully Registered.");
             }
+             </SCRIPT>
+               <SCRIPT>
+     function inserted1()
+            {
+              alert("click ok to view your data.");
+            }
         </SCRIPT>
+                   <SCRIPT>
+     function inserted2()
+            {
+              alert("Are you sure ?");
+            }
+        </SCRIPT>
+       
      </h:body>
 </html>
 

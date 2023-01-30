@@ -37,11 +37,29 @@ xmlns:f="http://java.sun.com/jsf/core"
              <h:outputLabel style="margin:auto;position:relative;top:90px;right:-460px;color:blue;font-size:20px;">Description</h:outputLabel>
             <h:inputText style="border-radius:15px 15px 15px 15px;border-color:red;margin:auto;position:relative;top:90px;right:-517px;color:black;font-size:20px;" value="#{courseBean.descr}"></h:inputText><br/>
             
-            <h:commandButton styleClass="form1" style="position:relative;top:130px;right:-510px " value="ADD" action="#{courseBean.CourseData()}"></h:commandButton>
-            <h:commandButton styleClass="form1"  style="position:relative;top:130px;right:-530px " value="VIEW" action="/CourseData.xhtml"></h:commandButton>
-            <h:commandButton styleClass="form1"  style="position:relative;top:130px;right:-550px " value="BACK" action="HomePage.xhtml"></h:commandButton>
+            <h:commandButton styleClass="form1" style="position:relative;top:130px;right:-510px " value="ADD" onclick="inserted()" action="#{courseBean.CourseData()}"></h:commandButton>
+            <h:commandButton styleClass="form1"  style="position:relative;top:130px;right:-530px " value="VIEW" onclick="inserted1()" action="/CourseData.xhtml"></h:commandButton>
+            <h:commandButton styleClass="form1"  style="position:relative;top:130px;right:-550px " value="BACK" onclick="inserted2()" action="HomePage.xhtml"></h:commandButton>
           
             </h:form>
+            <SCRIPT>
+     function inserted()
+            {
+              alert("Succesfully inserted.");
+            }
+        </SCRIPT>
+           <SCRIPT>
+     function inserted1()
+            {
+              alert("click ok to view your data.");
+            }
+        </SCRIPT>
+                   <SCRIPT>
+     function inserted2()
+            {
+              alert("Are you sure ?");
+            }
+        </SCRIPT>
     </h:body>
 
 </html>

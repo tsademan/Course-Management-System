@@ -36,12 +36,18 @@
             <h:outputLabel style="font-size:30px;font-family:inherit;position:relative;top:112px;right:-180px;color:brown;" value="Score"/><br/>
             <h:inputText styleClass="format" style="position:relative;top:80px;right:-560px;color:black;background-color:#b2dba1" value="#{courseUpdate.score}"/>
             <h:commandButton  styleClass="myformat"  style="font-size:20px;font-family:inherit;position:relative;top:150px;right:-500px;color:#FAD326;background-color:#DE21C5" value="Update" action="#{courseUpdate.CourseUpdateData()}" onclick="updated()"/>
-            <h:commandButton  styleClass="myformat"  style="font-size:20px;font-family:inherit;position:relative;top:150px;right:-530px;color:#FAD326;background-color:#DE21C5" value="Back" action="GradePage"/>
+            <h:commandButton  styleClass="myformat"  style="font-size:20px;font-family:inherit;position:relative;top:150px;right:-530px;color:#FAD326;background-color:#DE21C5" value="Back" action="GradePage" onclick="inserted2()"/>
         </h:form>
              <SCRIPT for="message">
             function updated()
             {
               alert("Succesfully Updated.");
+            }
+        </SCRIPT>
+         <SCRIPT>
+     function inserted2()
+            {
+              alert("Are you sure ?");
             }
         </SCRIPT>
     </h:body>
